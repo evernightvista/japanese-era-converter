@@ -1,0 +1,29 @@
+{
+    "KPlugin": {
+        "Name": "Japanese Era Converter",
+        "Name[zh_CN]": "日本年号转换器",
+        "Name[zh_TW]": "日本年號轉換器",
+        "Name[ja]": "和暦変換",
+        "Name[ko]": "일본 연호 변환기",
+        "Name[de]": "Japanische-Ära-Umwandler",
+        "Name[fr]": "Convertisseur d'ère japonaise",
+        "Description": "Convert Gregorian years (1910-2099) to Japanese era names",
+        "Description[zh_CN]": "将公历年份（1910-2099）转换为日本年号",
+        "Description[zh_TW]": "將公曆年份（1910-2099）轉換為日本年號",
+        "Description[ja]": "西暦（1910年～2099年）を和暦（元号）に変換",
+        "Description[ko]": "서기 연도(1910-2099)를 일본 연호로 변환",
+        "Description[de]": "Wandelt gregorianische Jahre (1910-2099) in japanische Äranamen um",
+        "Description[fr]": "Convertit les années grégoriennes (1910-2099) en noms d'ère japonaise",
+        "Icon": "view-calendar-japanese-era",
+        "Authors": [
+            {
+                "Name": "KairikiFedora",
+                "Email": "13278297951@sina.cn"
+            }
+        ],
+        "License": "MIT",
+        "Version": "45.0.0",
+        "EnabledByDefault": true
+    },
+    "X-Plasma-AdvertiseSingleRunnerQueryMode": true
+}

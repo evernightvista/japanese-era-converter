@@ -1,0 +1,25 @@
+# Japanese Era Converter - Simplified Chinese translations
+# Copyright (C) 2025 Japanese Era Converter
+# This file is distributed under the MIT license.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: japanese-era-converter 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/example/japanese-era-converter/issues\n"
+"POT-Creation-Date: 2025-10-11 00:00+0800\n"
+"PO-Revision-Date: 2025-10-11 00:00+0800\n"
+"Last-Translator: Japanese Era Converter <dev@example.com>\n"
+"Language-Team: Simplified Chinese <zh_CN@li.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/japaneserunner.cpp:18
+msgid "Converts the Gregorian year :q: (1910-2099) to the Japanese era"
+msgstr "将公历年份 :q:（1910-2099）转换为日本年号"
+
+#: src/japaneserunner.cpp:51
+msgid "Gregorian year %1 → click to copy to clipboard"
+msgstr "公历 %1 年 → 点击复制到剪贴板"
