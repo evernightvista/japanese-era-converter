@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: japanese-era-converter 1.0.0\n"
+"Project-Id-Version: japanese-era-converter 45.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/example/japanese-era-converter/issues\n"
-"POT-Creation-Date: 2025-10-11 00:00+0800\n"
-"PO-Revision-Date: 2025-10-11 00:00+0800\n"
+"POT-Creation-Date: 2026-10-12 00:00+0800\n"
+"PO-Revision-Date: 2026-10-12 00:00+0800\n"
 "Last-Translator: Japanese Era Converter <dev@example.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "Language: fr\n"
@@ -16,10 +16,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/japaneserunner.cpp:18
+#: src/japaneserunner.cpp:20
 msgid "Converts the Gregorian year :q: (1910-2099) to the Japanese era"
 msgstr "Convertit l'année grégorienne :q: (1910-2099) en ère japonaise"
 
-#: src/japaneserunner.cpp:51
+#: src/japaneserunner.cpp:24
+msgid "Converts a Japanese era year (e.g. 令和8年 / Reiwa 8) to the Gregorian year"
+msgstr "Convertit une année d'ère japonaise (ex. 令和8年 / Reiwa 8) en année grégorienne"
+
+#: src/japaneserunner.cpp:52
 msgid "Gregorian year %1 → click to copy to clipboard"
 msgstr "Année grégorienne %1 → cliquer pour copier dans le presse-papiers"
+
+#: src/japaneserunner.cpp:67
+msgid "%1%2 → click to copy Gregorian year to clipboard"
+msgstr "%1%2 → cliquer pour copier l'année grégorienne dans le presse-papiers"

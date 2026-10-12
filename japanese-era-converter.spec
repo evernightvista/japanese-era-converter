@@ -1,6 +1,6 @@
 Name:           japanese-era-converter
 Version:        45.0.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        KRunner plugin to convert Gregorian years to Japanese era names
 
 License:        MIT
@@ -44,6 +44,10 @@ not appear in KRunner results.
 %{_qt6_plugindir}/kf6/krunner/japaneseera.so
 
 %changelog
+* Mon Oct 12 2026 KairikiFedora <13278297951@sina.cn> - 45.0.0-2
+- Add pinyin fuzzy support
+- Add support for converting between Japanese era names
+
 * Sun Oct 11 2026 KairikiFedora <13278297951@sina.cn> - 45.0.0-1
 - Initial release
 - Support years 1910-2099

@@ -35,6 +35,17 @@ struct EraResult {
     QString display;        ///< 完整显示文本，如 "令和9年 (Reiwa 9)"
 };
 
+/**
+ * @brief 反向转换结果（年号年数 → 公历年）
+ */
+struct ReverseEraResult {
+    QString eraName;        ///< 年号汉字，如 "令和"
+    QString eraRomaji;      ///< 年号罗马字，如 "Reiwa"
+    int eraYear;            ///< 年号年数，如 8（令和8年）
+    int gregorianYear;      ///< 对应的公历年，如 2026
+    QString display;        ///< 完整显示文本，如 "2026年 (令和8年 / Reiwa 8)"
+};
+
 class JapaneseEra
 {
 public:
@@ -54,6 +65,38 @@ public:
      * @return 转换结果列表；若年份不在有效范围则返回空列表
      */
     static QVector<EraResult> convert(int gregorianYear);
+
+    /**
+     * @brief 将日本年号年数转换为公历年份（反向转换）
+     *
+     * 年号名支持三种形式：
+     *   - 汉字（如 "令和"）
+     *   - 罗马字（如 "Reiwa"，大小写不敏感）
+     *   - 拼音（如 "linghe"，大小写不敏感）
+     * 已结束的年号要求年数不超过其实际跨度（如 昭和 1–64）；
+     * 当前年号（令和）由插件上限 MaxYear 约束。
+     * 计算出的公历年必须在 [MinYear, MaxYear] 范围内。
+     *
+     * @param eraName 年号名（汉字 / 罗马字 / 拼音）
+     * @param eraYear 年号年数（1 表示元年，必须 ≥ 1）
+     * @return 转换结果列表（至多一项）；若年号名或年数无效则返回空
+     */
+    static QVector<ReverseEraResult> convertReverse(const QString &eraName, int eraYear);
+
+    /**
+     * @brief 从 KRunner 查询字符串解析并执行反向转换
+     *
+     * 支持的输入形式（以令和8年为例）：
+     *   - 汉字：  "令和8年" / "令和8" / "令和元年" / "令和1年"
+     *   - 罗马字："Reiwa 8" / "Reiwa8" / "reiwa8"（大小写不敏感）
+     *   - 拼音：  "linghe8年" / "linghe8" / "LingHe8"（大小写不敏感）
+     * 五个年号（明治/大正/昭和/平成/令和）均支持，对应拼音：
+     *   mingzhi / dazheng / zhaohe / pingcheng / linghe
+     *
+     * @param query KRunner 输入文本
+     * @return 转换结果列表；若无法识别为年号年数则返回空
+     */
+    static QVector<ReverseEraResult> convertReverseFromQuery(const QString &query);
 
     /**
      * @brief 判断年份是否在有效范围内
